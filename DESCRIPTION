@@ -1,0 +1,12 @@
+Package: citenn
+Type: Package
+Title: Creates 95% confidence interval for treatment effects using neural networks
+Version: 0.1.0
+Author: Daniel Ammann
+Maintainer: Daniel Ammann <daniel.ammann@students.unibe.ch>
+Description: Creates 95% confidence interval for treatment effects using neural networks
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    keras
