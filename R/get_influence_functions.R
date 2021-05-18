@@ -3,8 +3,6 @@ get_influence_functions=function(T_t,Y_t,mu0,tau,pred_ps,random=FALSE){
   second_part=as.vector(T_t)*(Y_t-as.vector(mu0)-as.vector(tau))
   if (random==FALSE){
     pred_psn=pred_ps
-    #pred_psn[pred_psn<0.0001]=0.0001
-    #pred_psn[pred_psn>0.9999]=0.9999
     psi_0=(first_part/(1-as.vector(pred_psn)))+as.vector(mu0)
     psi_1=(second_part/as.vector(pred_psn))+as.vector(mu0)+as.vector(tau)
 
