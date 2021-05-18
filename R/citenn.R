@@ -12,7 +12,6 @@ citenn=function(x,t,y,arcitecture_treatment=c(128,64,32),arcitecture_propensity=
     stop(msg)
   }
 
-  #Checking inputs
 
 
 
