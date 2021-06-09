@@ -1,8 +1,13 @@
 get_confidence_interval=function(psi_0,psi_1,n_part){
-  mean_d_psi=mean(psi_1-psi_0)
+  tau_pred_inf=psi_1-psi_0
+  mean_d_psi=mean(tau_pred_inf)
   sd_d_psi=sd(psi_1-psi_0)
-  ci_upper=(mean_d_psi+1.96*sd_d_psi/sqrt(n_part))
-  ci_lower=(mean_d_psi-1.96*sd_d_psi/sqrt(n_part))
-  out=list(ci_lower,ci_upper)
+  ci_upper_90=(mean_d_psi+1.645*sd_d_psi/sqrt(n_part))
+  ci_lower_90=(mean_d_psi-1.645*sd_d_psi/sqrt(n_part))
+  ci_upper_95=(mean_d_psi+1.96*sd_d_psi/sqrt(n_part))
+  ci_lower_95=(mean_d_psi-1.96*sd_d_psi/sqrt(n_part))
+  ci_upper_99=(mean_d_psi+2.576*sd_d_psi/sqrt(n_part))
+  ci_lower_99=(mean_d_psi-2.576*sd_d_psi/sqrt(n_part))
+  out=list(ci_lower_95,ci_upper_95,tau_pred_inf,ci_lower_90,ci_upper_90,ci_lower_99,ci_upper_99)
   return(out)
 }
